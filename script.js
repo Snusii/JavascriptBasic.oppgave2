@@ -21,7 +21,14 @@ funksjonen)
 
 ******************************************************************************/
 
-// Skriv koden for oppgave 1 her
+function oddOrEven(n) {
+    if (n % 1 === 1) {
+        return "Oddetall";
+    }
+    return "Partall";
+}
+
+
 
 /******************************************************************************
 2.
@@ -35,7 +42,11 @@ Eksempel: "Dette er kult" skal returnere "DETTE ER KULT!"
 
 ******************************************************************************/
 
-// Skriv koden for oppgave 2 her
+function upperCase("Dette er kult") {
+    return "DETTE ER KULT!"
+}
+
+console.log(upperCase)
 
 /******************************************************************************
 3.
@@ -59,7 +70,13 @@ Hvis ingen timeverdi mottas, skal funksjonen returnere en feilmelding.
 
 ******************************************************************************/
 
-// Skriv koden for oppgave 3 her
+const name = "Leander"
+let time = 0
+
+function timeHour(time < 0) => "Ugyldig tid" {
+
+}
+
 
 /******************************************************************************
 4.
