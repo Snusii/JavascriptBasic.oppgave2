@@ -22,11 +22,13 @@ funksjonen)
 ******************************************************************************/
 
 function oddOrEven(n) {
-    if (n % 1 === 1) {
-        return "Oddetall";
+    if (n & 1 === 1) {
+        return "Tallet er et oddetall.";
     }
-    return "Partall";
+    return "Tallet er et partall.";
 }
+
+console.log(oddOrEven(177));
 
 
 
@@ -71,11 +73,30 @@ Hvis ingen timeverdi mottas, skal funksjonen returnere en feilmelding.
 ******************************************************************************/
 
 const name = "Leander"
-let time = 0
+let time = 
 
-function timeHour(time < 0) => "Ugyldig tid" {
-
+let timeHour(time) => {
+    if (time < 0) {
+        return "Ugyldig tid"; 
+    }
+    if (0 && 5) {
+        return `God natt $name!`;
+    }
+    if (6 && 11) {
+        return `God morgen $name!`;
+    }
+    if (12 && 17) {
+        return `God dag $name!`;
+    }
+    if (18 && 23) {
+        return `God kveld $name`;
+    }
+    else (time > 23) {
+        return "Ugyldig tid";
+    }
+        
 }
+
 
 
 /******************************************************************************
