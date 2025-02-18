@@ -93,7 +93,31 @@ Eksempel 2: ["En", "To", "Tre", "Fire", "Fem", "Seks"] skal returnere
 
 ******************************************************************************/
 
-// Skriv koden for oppgave 4 her
+let arrayColor = [
+    "Rød",
+    "Grønn",
+    "Blå",
+    "Gul"
+]
+
+let arrayStringNumber = [
+    "En",
+    "To",
+    "Tre",
+    "Fire",
+    "Fem",
+    "Seks"
+]
+
+function colorArray(arrayColor) {
+    arrayColor.pop()
+    arrayColor.shift()
+}
+
+function stringNumberArray(arrayStringNumber) {
+    stringNumberArray.pop()
+    stringNumberArray.shift()
+}
 
 /******************************************************************************
 5.
@@ -114,7 +138,11 @@ Eksempel 3: "   vanskelig        " skal returnere "gøy".
 
 ******************************************************************************/
 
-// Skriv koden for oppgave 5 her
+let text = "vanskelig"
+
+function hardTofun() {
+    if (text = "gøy")
+}
 
 /******************************************************************************
 6.
@@ -139,7 +167,10 @@ Ekstra utfordring: Lag et nytt array som kun inkluderer elementer som inneholder
 
 ******************************************************************************/
 
-// Skriv koden for oppgave 6 her
+function itemsArray() {
+    itemsArray.shift();
+    
+}
 
 /******************************************************************************
 7.
