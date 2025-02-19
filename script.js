@@ -44,11 +44,14 @@ Eksempel: "Dette er kult" skal returnere "DETTE ER KULT!"
 
 ******************************************************************************/
 
-function upperCase("Dette er kult") {
-    return "DETTE ER KULT!"
+let uppercaseText = "Dette er kult"
+
+function upperCase (uppercaseText) {
+    let t = uppercaseText.toUpperCase()
+    return `${t}!`
 }
 
-console.log(upperCase)
+console.log(upperCase(uppercaseText))
 
 /******************************************************************************
 3.
@@ -73,29 +76,27 @@ Hvis ingen timeverdi mottas, skal funksjonen returnere en feilmelding.
 ******************************************************************************/
 
 const name = "Leander"
-let time = 
+let time = 0 
 
-let timeHour(time) => {
-    if (time < 0) {
-        return "Ugyldig tid"; 
-    }
-    if (0 && 5) {
+let timeHour = (time) => {
+    if (time >= 0 || time <= 5) {
         return `God natt $name!`;
     }
-    if (6 && 11) {
+    else if (time >= 6 || time <= 11) {
         return `God morgen $name!`;
     }
-    if (12 && 17) {
+    else if (time >= 12 || time <= 17) {
         return `God dag $name!`;
     }
-    if (18 && 23) {
+    else if (time >= 18 || time <= 23 ) {
         return `God kveld $name`;
     }
-    else (time > 23) {
+    else {
         return "Ugyldig tid";
     }
         
 }
+
 
 
 
@@ -136,8 +137,8 @@ function colorArray(arrayColor) {
 }
 
 function stringNumberArray(arrayStringNumber) {
-    stringNumberArray.pop()
-    stringNumberArray.shift()
+    arrayStringNumber.pop()
+    arrayStringNumber.shift()
 }
 
 /******************************************************************************
@@ -159,11 +160,17 @@ Eksempel 3: "   vanskelig        " skal returnere "gøy".
 
 ******************************************************************************/
 
-let text = "vanskelig"
+let text = " Javascript er vanskelig "
 
-function hardTofun() {
-    if (text = "gøy")
+function changeText(text) {
+    let result = text.replace("vanskelig", "gøy")
+
+    return result
+    
 }
+
+
+
 
 /******************************************************************************
 6.
