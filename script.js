@@ -203,13 +203,13 @@ Ekstra utfordring: Lag et nytt array som kun inkluderer elementer som inneholder
 ******************************************************************************/
 
 items.shift();
-let firstRemove = items.splice(2,1, "Linjal");
-let secondRemove = items.splice(0,2, "Markeringspenn");
-items.join()
+items.splice(2,1, "Linjal");
+items.splice(0,2, "Markeringspenn");
+items.join(" | ");
 
-
-
-console.log(items);
+const eArray = items.filter((value) => {
+    return value.match("e")
+})
 
 /******************************************************************************
 7.
