@@ -21,16 +21,15 @@ funksjonen)
 
 ******************************************************************************/
 
+
+// Bitwise operator: 1 = 1 and 2 = 10 / 8 = 1000 and 9 = 1001
+// if number ends with 0 its always a even number, if it ends with 1 its alwaya a odd number
 function oddOrEven(n) {
     if (n & 1 === 1) {
         return "Tallet er et oddetall.";
     }
     return "Tallet er et partall.";
 }
-
-console.log(oddOrEven(177));
-
-
 
 /******************************************************************************
 2.
@@ -44,14 +43,18 @@ Eksempel: "Dette er kult" skal returnere "DETTE ER KULT!"
 
 ******************************************************************************/
 
-let uppercaseText = "Dette er kult"
+// string variable
+let upperCaseText = "Dette er kult"
 
-function upperCase (uppercaseText) {
-    let t = uppercaseText.toUpperCase()
+// a function with the parameter upperCaseText
+function upperCase (upperCaseText) {
+    // Made a new variable t, this variable takes in the parameter and uses the method .toUpperCase()
+    let t = upperCaseText.toUpperCase()
+    // Return the t variable with !
     return `${t}!`
 }
 
-console.log(upperCase(uppercaseText))
+console.log(upperCase(upperCaseText))
 
 /******************************************************************************
 3.
@@ -75,21 +78,21 @@ Hvis ingen timeverdi mottas, skal funksjonen returnere en feilmelding.
 
 ******************************************************************************/
 
-const name = "Leander"
-let time = 0 
+const nameO = "Leander"
+let time = 7 
 
-let timeHour = (time) => {
+let timeHour = (name, time) => {
     if (time >= 0 || time <= 5) {
-        return `God natt $name!`;
+        return `God natt ${name}!`;
     }
     else if (time >= 6 || time <= 11) {
-        return `God morgen $name!`;
+        return `God morgen ${name}!`;
     }
     else if (time >= 12 || time <= 17) {
-        return `God dag $name!`;
+        return `God dag ${name}!`;
     }
     else if (time >= 18 || time <= 23 ) {
-        return `God kveld $name`;
+        return `God kveld ${name}!`;
     }
     else {
         return "Ugyldig tid";
@@ -97,7 +100,7 @@ let timeHour = (time) => {
         
 }
 
-
+console.log(timeHour(nameO, time));
 
 
 /******************************************************************************
@@ -136,6 +139,7 @@ function colorArray(arrayColor) {
     arrayColor.shift()
 }
 
+console.log(colorArray)
 function stringNumberArray(arrayStringNumber) {
     arrayStringNumber.pop()
     arrayStringNumber.shift()
@@ -195,7 +199,7 @@ Ekstra utfordring: Lag et nytt array som kun inkluderer elementer som inneholder
 
 ******************************************************************************/
 
-function itemsArray() {
+const itemsArray = (items) => {
     itemsArray.shift();
     
 }
