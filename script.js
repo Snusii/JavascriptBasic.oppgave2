@@ -118,19 +118,14 @@ Eksempel 2: ["En", "To", "Tre", "Fire", "Fem", "Seks"] skal returnere
 
 ******************************************************************************/
 
-let arrayColor = [
+const arrayColor = [
     "Rød",
     "Grønn",
     "Blå",
     "Gul"
 ]
 
-arrayColor.pop()
-arrayColor.shift()
-
-console.log(arrayColor)
-
-let arrayNumber = [
+const arrayNumber = [
     "En",
     "To",
     "Tre",
@@ -139,22 +134,19 @@ let arrayNumber = [
     "Seks"
 ]
 
-arrayNumber.pop()
-arrayNumber.shift()
-
-console.log(arrayNumber)
-/*
-function colorArray(arrayColor) {
-    arrayColor.pop()
-    arrayColor.shift()
+function inArrayColor(ac) {
+    ac.pop();
+    ac.shift();
+    return ac;
+    
 }
 
-console.log(colorArray)
-function stringNumberArray(arrayStringNumber) {
-    arrayStringNumber.pop()
-    arrayStringNumber.shift()
+const inArrayNumber = (an) => {
+    an.pop();
+    an.shift();
+    return an;
 }
-*/
+
 
 /******************************************************************************
 5.
