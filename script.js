@@ -23,7 +23,7 @@ funksjonen)
 
 
 // Bitwise operator: 1 = 1 and 2 = 10 / 8 = 1000 and 9 = 1001
-// if number ends with 0 its always a even number, if it ends with 1 its alwaya a odd number
+// if bit number ends with 0 its always a even number, if it ends with 1 its always a odd number
 function oddOrEven(n) {
     if (n & 1 === 1) {
         return "Tallet er et oddetall.";
@@ -78,21 +78,21 @@ Hvis ingen timeverdi mottas, skal funksjonen returnere en feilmelding.
 
 ******************************************************************************/
 
-const nameO = "Leander"
-let time = 7 
+const userName = "Leander";
+let time = 0;
 
-let timeHour = (name, time) => {
-    if (time >= 0 || time <= 5) {
-        return `God natt ${name}!`;
+let timeHour = (userName, time) => {
+    if (time >= 0 && time <= 5) {
+        return `God natt ${userName}!`;
     }
-    else if (time >= 6 || time <= 11) {
-        return `God morgen ${name}!`;
+    else if (time >= 6 && time <= 11) {
+        return `God morgen ${userName}!`;
     }
-    else if (time >= 12 || time <= 17) {
-        return `God dag ${name}!`;
+    else if (time >= 12 && time <= 17) {
+        return `God dag ${userName}!`;
     }
-    else if (time >= 18 || time <= 23 ) {
-        return `God kveld ${name}!`;
+    else if (time >= 18 && time <= 23) {
+        return `God kveld ${userName}!`;
     }
     else {
         return "Ugyldig tid";
@@ -100,7 +100,7 @@ let timeHour = (name, time) => {
         
 }
 
-console.log(timeHour(nameO, time));
+console.log(timeHour(userName, time));
 
 
 /******************************************************************************
@@ -125,7 +125,12 @@ let arrayColor = [
     "Gul"
 ]
 
-let arrayStringNumber = [
+arrayColor.pop()
+arrayColor.shift()
+
+console.log(arrayColor)
+
+let arrayNumber = [
     "En",
     "To",
     "Tre",
@@ -134,6 +139,11 @@ let arrayStringNumber = [
     "Seks"
 ]
 
+arrayNumber.pop()
+arrayNumber.shift()
+
+console.log(arrayNumber)
+/*
 function colorArray(arrayColor) {
     arrayColor.pop()
     arrayColor.shift()
@@ -144,6 +154,7 @@ function stringNumberArray(arrayStringNumber) {
     arrayStringNumber.pop()
     arrayStringNumber.shift()
 }
+*/
 
 /******************************************************************************
 5.
@@ -199,10 +210,14 @@ Ekstra utfordring: Lag et nytt array som kun inkluderer elementer som inneholder
 
 ******************************************************************************/
 
-const itemsArray = (items) => {
-    itemsArray.shift();
-    
-}
+items.shift();
+let firstRemove = items.splice(2,1, "Linjal");
+let secondRemove = items.splice(0,2, "Markeringspenn");
+items.join()
+
+
+
+console.log(items);
 
 /******************************************************************************
 7.
