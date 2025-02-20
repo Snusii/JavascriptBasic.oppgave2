@@ -235,9 +235,9 @@ items.join(" | ");
 
 //Made a arrowfunction that creates a new array
 //use the filter() method to filter through items array and create a new parameter thats value for the eArray 
-const eArray = items.filter((value) => {
+const eArray = items.filter((eArray) => {
     //return this new array with match method to only get the index with "e" inside
-    return value.match("e")
+    return eArray.match("e")
 })
 
 /******************************************************************************
@@ -264,7 +264,14 @@ Eksempel 4: (["En", "To", "Tre"], "To") --> ["En", "Tre"]
 
 ******************************************************************************/
 
-// Skriv koden for oppgave 7 her
+const colorText = "Grønn"
+const colorA = [
+    "Rød",
+    "Grønn", 
+    "Blå",
+]
+
+function 
 
 /******************************************************************************
 8.
