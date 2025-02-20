@@ -103,9 +103,6 @@ let timeHour = (userName, time) => {
         
 }
 
-console.log(timeHour(userName, time));
-
-
 /******************************************************************************
 4.
 
@@ -264,17 +261,26 @@ Eksempel 4: (["En", "To", "Tre"], "To") --> ["En", "Tre"]
 
 ******************************************************************************/
 
-const colorText = "Grønn"
-const colorA = [
+const colorText = "Grønn";
+const colorArray = [
     "Rød",
     "Grønn", 
     "Blå",
-]
+];
+let found = false;
 
-function checkArray(t, arr) {
-    t = colorText.includes("Grønn");
-    arr = colorA.slice(1,0);
-    return arr.length();
+function checkArray(inText, inArray) {
+    for (let i = 0; i < inArray.length; i++) {
+        if (inArray[i] === inText) {
+            found = true;
+            inArray.splice(i,1);
+        }    
+    }
+    if (found === false) {
+        inArray.splice(inArray.length, 0, inText);
+    } 
+    return inArray;
+
 }
 
 /******************************************************************************
