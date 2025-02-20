@@ -48,10 +48,8 @@ let upperCaseText = "Dette er kult";
 
 // a function with the parameter upperCaseText
 function upperCase (upperCaseText) {
-    // Made a new variable t, this variable takes in the parameter and uses the method .toUpperCase()
-    let t = upperCaseText.toUpperCase();
-    // Return the t variable with !
-    return `${t}!`;
+    //Returns the upperCaseText with method toUpperCase()
+    return `${upperCaseText.toUpperCase()}!`
 }
 
 /******************************************************************************
@@ -141,8 +139,8 @@ const arrayNumber = [
 ////////////
 
 
-//function for Arraycolor, gives arraycolor ac as a parameter
-function inArrayColor(ac) {
+//arrayPopShift function
+function arrayPopShift(ac) {
     //remove last index in the array
     ac.pop();
     //remove first index in the array
@@ -152,8 +150,8 @@ function inArrayColor(ac) {
     
 }
 
-//arrow function that gives arraynumber an as a parameter
-const inArrayNumber = (an) => {
+//popShiftArray, arrow function
+const popShiftArray = (an) => {
     //remove last index in the array
     an.pop();
     //remove first index in the array
@@ -182,7 +180,7 @@ Eksempel 3: "   vanskelig        " skal returnere "gøy".
 
 ******************************************************************************/
 
-// variable text with a sting
+// variable string
 let text = " Javascript er vanskelig ";
 
 //function for text variable
@@ -261,24 +259,41 @@ Eksempel 4: (["En", "To", "Tre"], "To") --> ["En", "Tre"]
 
 ******************************************************************************/
 
+// String variable
 const colorText = "Grønn";
+// Array variable
 const colorArray = [
     "Rød",
     "Grønn", 
     "Blå",
 ];
-let found = false;
 
+///////////
+//Function
+//////////
+
+//function with 2 parameters
 function checkArray(inText, inArray) {
+    // boolean
+    let found = false;
+    /*Looping through the array,
+    looking for the color green value in the array to match inText */
     for (let i = 0; i < inArray.length; i++) {
+        //if current value is equal to inText
         if (inArray[i] === inText) {
+            //boolean is true
             found = true;
+            //delete the value from the array
             inArray.splice(i,1);
         }    
     }
-    if (found === false) {
+    
+    //if boolean (false) is not found 
+    if (!found) {
+        //inArray posistion , delete nothing, add inText
         inArray.splice(inArray.length, 0, inText);
     } 
+    // return updated inArray
     return inArray;
 
 }
@@ -310,7 +325,7 @@ Returner "😎Kun primitive verdier😎".
 ******************************************************************************/
 
 // variable
-let checkP = 5
+let checkP = 5;
 
 ////////////
 //Function
