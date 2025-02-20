@@ -54,8 +54,6 @@ function upperCase (upperCaseText) {
     return `${t}!`
 }
 
-console.log(upperCase(upperCaseText))
-
 /******************************************************************************
 3.
 
@@ -78,10 +76,14 @@ Hvis ingen timeverdi mottas, skal funksjonen returnere en feilmelding.
 
 ******************************************************************************/
 
+//username variable
 const userName = "Leander";
+//Time variable
 let time = 0;
 
+//Arrow function with parameters for username and time
 let timeHour = (userName, time) => {
+    //if time is more then 0 and time is less then 5 - return "God Natt + username"
     if (time >= 0 && time <= 5) {
         return `God natt ${userName}!`;
     }
@@ -94,6 +96,7 @@ let timeHour = (userName, time) => {
     else if (time >= 18 && time <= 23) {
         return `God kveld ${userName}!`;
     }
+    // return "ugyldig tid" for all other times under 0 and over 23
     else {
         return "Ugyldig tid";
     }
@@ -118,6 +121,7 @@ Eksempel 2: ["En", "To", "Tre", "Fire", "Fem", "Seks"] skal returnere
 
 ******************************************************************************/
 
+//first example array
 const arrayColor = [
     "Rød",
     "Grønn",
@@ -125,6 +129,7 @@ const arrayColor = [
     "Gul"
 ]
 
+//second example array
 const arrayNumber = [
     "En",
     "To",
@@ -134,16 +139,29 @@ const arrayNumber = [
     "Seks"
 ]
 
+/////////////
+//Functions
+////////////
+
+
+//function for Arraycolor, gives arraycolor ac as a parameter
 function inArrayColor(ac) {
+    //remove last index in the array
     ac.pop();
+    //remove first index in the array
     ac.shift();
+    // returns the result after removeing those two
     return ac;
     
 }
 
+//arrow function that gives arraynumber an as a parameter
 const inArrayNumber = (an) => {
+    //remove last index in the array
     an.pop();
+    //remove first index in the array
     an.shift();
+    // returns the result after removeing those two
     return an;
 }
 
@@ -167,11 +185,15 @@ Eksempel 3: "   vanskelig        " skal returnere "gøy".
 
 ******************************************************************************/
 
+// variable text with a sting
 let text = " Javascript er vanskelig "
 
+//function for text variable
 function changeText(text) {
+    //made a new variable result, that takes in the variable text with the method replace()
+    //to chance the word "Vanskelig" to "gøy"
     let result = text.replace("vanskelig", "gøy")
-
+    //return the result variable I made with a new string
     return result
     
 }
@@ -202,12 +224,19 @@ Ekstra utfordring: Lag et nytt array som kun inkluderer elementer som inneholder
 
 ******************************************************************************/
 
+//removes the first index in the array
 items.shift();
+//splice method go to index 2 in the array, and remove 1 index from the array and replace it with "Linjal"
 items.splice(2,1, "Linjal");
+//splice method go to index 0 in the array and removes 2 words and change those words with one new "Markeringspenn"
 items.splice(0,2, "Markeringspenn");
+//this method makes all indexes in the array come up as a string with | between the words.
 items.join(" | ");
 
+//Made a arrowfunction that creates a new array
+//use the filter() method to filter through items array and create a new parameter thats value for the eArray 
 const eArray = items.filter((value) => {
+    //return this new array with match method to only get the index with "e" inside
     return value.match("e")
 })
 
