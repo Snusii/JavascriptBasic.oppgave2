@@ -44,14 +44,14 @@ Eksempel: "Dette er kult" skal returnere "DETTE ER KULT!"
 ******************************************************************************/
 
 // string variable
-let upperCaseText = "Dette er kult"
+let upperCaseText = "Dette er kult";
 
 // a function with the parameter upperCaseText
 function upperCase (upperCaseText) {
     // Made a new variable t, this variable takes in the parameter and uses the method .toUpperCase()
-    let t = upperCaseText.toUpperCase()
+    let t = upperCaseText.toUpperCase();
     // Return the t variable with !
-    return `${t}!`
+    return `${t}!`;
 }
 
 /******************************************************************************
@@ -127,7 +127,7 @@ const arrayColor = [
     "Grønn",
     "Blå",
     "Gul"
-]
+];
 
 //second example array
 const arrayNumber = [
@@ -137,7 +137,7 @@ const arrayNumber = [
     "Fire",
     "Fem",
     "Seks"
-]
+];
 
 /////////////
 //Functions
@@ -186,15 +186,15 @@ Eksempel 3: "   vanskelig        " skal returnere "gøy".
 ******************************************************************************/
 
 // variable text with a sting
-let text = " Javascript er vanskelig "
+let text = " Javascript er vanskelig ";
 
 //function for text variable
 function changeText(text) {
     //made a new variable result, that takes in the variable text with the method replace()
     //to chance the word "Vanskelig" to "gøy"
-    let result = text.replace("vanskelig", "gøy")
+    let result = text.replace("vanskelig", "gøy");
     //return the result variable I made with a new string
-    return result
+    return result;
     
 }
 
@@ -234,11 +234,11 @@ items.splice(0,2, "Markeringspenn");
 items.join(" | ");
 
 //Made a arrowfunction that creates a new array
-//use the filter() method to filter through items array and create a new parameter thats value for the eArray 
-const eArray = items.filter((eArray) => {
+//use the filter() method to filter through items array and create a new parameter e for the eArray 
+const eArray = items.filter((e) => {
     //return this new array with match method to only get the index with "e" inside
-    return eArray.match("e")
-})
+    return e.match("e");
+});
 
 /******************************************************************************
 7.
@@ -272,9 +272,9 @@ const colorA = [
 ]
 
 function checkArray(t, arr) {
-    t = colorText.includes("Grønn")
-    arr = colorA.slice(1,0)
-    return arr;
+    t = colorText.includes("Grønn");
+    arr = colorA.slice(1,0);
+    return arr.length();
 }
 
 /******************************************************************************
@@ -303,27 +303,43 @@ Returner "😎Kun primitive verdier😎".
 
 ******************************************************************************/
 
-let checkP = 6
+// variable
+let checkP = 5
+
+////////////
+//Function
+///////////
+
+// function with checkP parameter
 function checkParameter (checkP) {
 
+    //if checkP is the same as "Returner stringen med"
     if (checkP === "Returner stringen med") {
-        return `😎${checkP}😎`
+        //return 😎Returner stringen med😎
+        return `😎${checkP}😎`;
     }
+    //else if checkP is the same as the number 5
     else if (checkP === 5) {
-        checkP += 5
-        checkP.toString()
-        return `😎${checkP}😎`
+        //checkP + 5 = 10
+        checkP += 5;
+        //make number to string
+        checkP.toString();
+        //return 😎10😎
+        return `😎${checkP}😎`;
     }
-    else if (checkP === true /* || checkP !== true*/) {
-        return "😎Ja😎" /* : "😎Slapp av😎"*/ 
+    //else if checkP is the same as true
+    else if (checkP === true) {
+        //return 😎Ja😎
+        return "😎Ja😎";
     }
-    else if (checkP === false) {
-        return "😎Slapp av😎"
+    //else if checkP is not the same as true  === false
+    else if (checkP !== false) {
+        //return 😎Slapp av😎
+        return "😎Slapp av😎";
     }
+    //else return 😎Kun primitive verdier😎
     else {
-        return "😎Kun primitive verdier😎"
+        return "😎Kun primitive verdier😎";
     }
 
 }
-
-console.log(checkParameter(checkP))
