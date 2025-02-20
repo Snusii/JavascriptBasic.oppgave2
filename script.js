@@ -271,7 +271,11 @@ const colorA = [
     "Blå",
 ]
 
-function 
+function checkArray(t, arr) {
+    t = colorText.includes("Grønn")
+    arr = colorA.slice(1,0)
+    return arr;
+}
 
 /******************************************************************************
 8.
@@ -299,4 +303,25 @@ Returner "😎Kun primitive verdier😎".
 
 ******************************************************************************/
 
-// Skriv koden for oppgave 8 her
+let checkP = "Returner stringen med"
+function checkParameter (checkP) {
+    if (checkP === "Returner stringen med") {
+        return "😎${checkP}😎"
+    }
+    else if (checkP === 5) {
+        checkP += 5
+        checkP.toString()
+        return "😎${checkP}😎"
+    }
+    else if (checkP === true /* || checkP !== true*/) {
+        return "😎Ja😎" /* : "😎Slapp av😎"*/ 
+    }
+    else if (checkP === false) {
+        return "😎Slapp av😎"
+    }
+    else {
+        return "😎Kun primitive verdier😎"
+    }
+}
+
+console.log(checkParameter(checkP))
