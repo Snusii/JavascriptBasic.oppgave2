@@ -303,15 +303,16 @@ Returner "😎Kun primitive verdier😎".
 
 ******************************************************************************/
 
-let checkP = "Returner stringen med"
+let checkP = 6
 function checkParameter (checkP) {
+
     if (checkP === "Returner stringen med") {
-        return "😎${checkP}😎"
+        return `😎${checkP}😎`
     }
     else if (checkP === 5) {
         checkP += 5
         checkP.toString()
-        return "😎${checkP}😎"
+        return `😎${checkP}😎`
     }
     else if (checkP === true /* || checkP !== true*/) {
         return "😎Ja😎" /* : "😎Slapp av😎"*/ 
@@ -322,6 +323,7 @@ function checkParameter (checkP) {
     else {
         return "😎Kun primitive verdier😎"
     }
+
 }
 
 console.log(checkParameter(checkP))
